@@ -25,7 +25,6 @@ variable "dd_integration_role_name" {
   }
 }
 
-
 variable "dd_destination_url" {
   description = "Datadog intake URL."
   type        = string

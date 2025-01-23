@@ -1,5 +1,5 @@
 resource "aws_iam_role_policy" "config_stream_role_policy" {
-  name = "WriteConfigChangePolicy"
+  name = "datadog-write-config-changes-policy"
   role = aws_iam_role.config_stream_role.id
   policy = jsonencode({
     "Statement" : [
@@ -25,7 +25,7 @@ resource "aws_iam_role_policy" "config_stream_role_policy" {
 }
 
 resource "aws_iam_role_policy" "config_stream_subscription_role_policy" {
-  name = "WriteToConfigDataStream"
+  name = "datadog-write-config-changes-to-stream-policy"
   role = aws_iam_role.config_stream_subscription_role.id
   policy = jsonencode({
     "Statement" : [
@@ -46,7 +46,7 @@ resource "aws_iam_role_policy" "config_stream_subscription_role_policy" {
 }
 
 resource "aws_iam_role_policy" "config_stream_delivery_role_policy" {
-  name = "DeliveryStreamRolePolicy"
+  name = "datadog-config-changes-delivery-stream-policy"
   role = aws_iam_role.config_stream_delivery_role.id
   policy = jsonencode({
     "Statement" : [
@@ -85,7 +85,7 @@ resource "aws_iam_role_policy" "config_stream_delivery_role_policy" {
 }
 
 resource "aws_iam_role_policy" "config_stream_bucket_read_policy" {
-  name = "ReadConfigBucketPolicy"
+  name = "datadog-read-config-changes-bucket-policy"
   role = var.dd_integration_role_name
   policy = jsonencode({
     "Statement" : [

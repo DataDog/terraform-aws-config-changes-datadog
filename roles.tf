@@ -1,6 +1,6 @@
 # aws config changes
 resource "aws_iam_role" "config_stream_subscription_role" {
-  name = "config-stream-subscription-role"
+  name = "datadog-config-stream-subscription-role"
   assume_role_policy = jsonencode({
     "Statement" : [
       {
@@ -21,7 +21,7 @@ resource "aws_iam_role" "config_stream_subscription_role" {
 }
 
 resource "aws_iam_role" "config_stream_delivery_role" {
-  name = "config-stream-delivery-role"
+  name = "datadog-config-stream-delivery-role"
   assume_role_policy = jsonencode({
     "Statement" : [
       {
@@ -39,7 +39,7 @@ resource "aws_iam_role" "config_stream_delivery_role" {
 }
 
 resource "aws_iam_role" "config_stream_role" {
-  name = "config-stream-role"
+  name = "datadog-config-stream-role"
   assume_role_policy = jsonencode({
     "Statement" : [
       {
