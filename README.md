@@ -1,7 +1,7 @@
 # AWS Config Change Streaming Module
 
 ## Description
-Use thie Terraform module to Enable AWS Config configuration changes streaming to Datadog.  
+Use this Terraform module to enable AWS Config configuration changes streaming to Datadog.  
 This module will create and enable an AWS configuration recorder [see here](https://docs.aws.amazon.com/config/)
 which records all resource configuration changes applied to any AWS resource and forwards them to Datadog.  
 For further info check [Datadog Official Documentation](https://docs.datadoghq.com/integrations/amazon_config)
