@@ -10,7 +10,7 @@ For further info check [Datadog Official Documentation](https://docs.datadoghq.c
 
 ```terraform
 module "datadog-aws-config" {
-  source                       = "Datadog/aws-config"
+  source                       = "DataDog/config-changes-datadog/aws"
   version                      = "1.0.0"
   dd_api_key_secret_arn        = "arn:aws:secretsmanager:us-east-1:000000000000:secret:my-secret"
   dd_integration_role_name     = "datadog-integration-role"
