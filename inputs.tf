@@ -36,7 +36,7 @@ variable "dd_destination_url" {
       "https://cloudplatform-intake.datadoghq.eu/api/v2/cloudchanges?dd-protocol=aws-kinesis-firehose",
       "https://cloudplatform-intake.us3.datadoghq.com/api/v2/cloudchanges?dd-protocol=aws-kinesis-firehose",
     "https://cloudplatform-intake.us5.datadoghq.com/api/v2/cloudchanges?dd-protocol=aws-kinesis-firehose"], var.dd_destination_url)
-    error_message = "Destination URL must be a known option"
+    error_message = "Destination URL must be a valid intake URL"
   }
 }
 
