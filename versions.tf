@@ -1,5 +1,4 @@
 locals {
-  # Remember to add a changelog entry in the module's README when bumping this version
   terraform_module_version = "1.0.0"
 }
 

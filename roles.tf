@@ -1,4 +1,3 @@
-# aws config changes
 resource "aws_iam_role" "config_stream_subscription_role" {
   name = "datadog-config-stream-subscription-role"
   assume_role_policy = jsonencode({
