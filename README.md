@@ -9,14 +9,15 @@ For further info check [Datadog Official Documentation](https://docs.datadoghq.c
 ## Usage
 
 ```terraform
-module "datadog-aws-config" {
+module "config-changes-datadog" {
   source                       = "DataDog/config-changes-datadog/aws"
   version                      = "1.0.0"
   dd_api_key_secret_arn        = "arn:aws:secretsmanager:us-east-1:000000000000:secret:my-secret"
   dd_integration_role_name     = "datadog-integration-role"
-  sns_topic_name               = "my-topc"
+  sns_topic_name               = "my-topic"
   s3_bucket_name               = "my-bucket"
   failed_events_s3_bucket_name = "my-other-bucket"
+  dd_destination_url           = "https://cloudplatform-intake.datadoghq.com/api/v2/cloudchanges?dd-protocol=aws-kinesis-firehose"
   tags = {
     "team" = "AWS"
   }
